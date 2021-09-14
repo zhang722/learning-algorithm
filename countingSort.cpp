@@ -1,3 +1,9 @@
+/*
+计数排序
+时间复杂度:O(n)
+https://www.luogu.com.cn/problem/P1271
+*/
+
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -34,7 +40,10 @@ void counting_sort(int * arr, int len)
   }
   int range = max - min + 1;
   int * count = new int[range];
-  memset(count, 0, sizeof(int)*(range));
+
+  for(int m=0;m<range;m++) {
+    count[m] = 0;
+  }
 
   for(int i=0;i<len;i++) {
     count[arr[i] - min] ++;

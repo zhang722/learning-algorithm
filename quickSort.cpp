@@ -1,3 +1,9 @@
+/*
+快速排序
+时间复杂度:O(nlgn),极端情况退化到O(n^2)
+https://www.luogu.com.cn/problem/P1177
+*/
+
 #include <cstdio>
 
 using namespace std;
