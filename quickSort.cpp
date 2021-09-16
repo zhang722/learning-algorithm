@@ -4,6 +4,13 @@
 https://www.luogu.com.cn/problem/P1177
 */
 
+/*
+所有排序方法都应该注意：若比较对象为引用类型时，
+若简单地令type pivot = &a[low],则pivot是可以变化的
+排序结果不对。
+正确做法是令pivot等于a[low]的拷贝
+*/
+
 #include <cstdio>
 
 using namespace std;
@@ -14,6 +21,7 @@ void swap(int * a, int * b)
   *a = *b;
   *b = s;
 }
+
 
 
 /*
@@ -118,8 +126,8 @@ void quick_sort(int a[], int low, int high)
 
 /*
 输入格式：
-5
-2 1 3 6 3
+10
+22 134 321 665 387 1843 432 232 554 76
 */
 int main()
 {

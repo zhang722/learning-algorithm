@@ -25,6 +25,10 @@ int main()
   return 0;
 }
 
+/*
+6
+13 312 321 342 654 65
+*/
 
 void counting_sort(int * arr, int len) 
 {
